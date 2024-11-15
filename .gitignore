@@ -29,3 +29,4 @@ Thumbs.db
 *.ctxt
 .mtj.tmp/
 *.nar
+src/lab5/tests/AllTests.java
