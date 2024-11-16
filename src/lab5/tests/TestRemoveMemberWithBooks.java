@@ -2,12 +2,9 @@ package lab5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import lab5.Book;
+import lab5.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import lab5.Member;
-import lab5.PaperBook;
-import lab5.Library;
 
 
 class TestRemoveMemberWithBooks {
@@ -21,8 +18,8 @@ class TestRemoveMemberWithBooks {
 	@BeforeEach
 	void setUp() throws Exception {
 		this.library = new Library(); // Fresh library: one member, two tests
-		book1 = new PaperBook("Dune");
-		book2 = new PaperBook("1984");
+		book1 = new EBook("Dune");
+		book2 = new AudioBook("1984");
 		book3 = new PaperBook("Moby Dick");
 		member = new Member("Dude");
 		library.addMember(member);

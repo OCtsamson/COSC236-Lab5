@@ -3,6 +3,7 @@ package lab5.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 import lab5.Book;
+import lab5.EBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,7 @@ class TestBorrowBooks {
 	Member member1;
 	Member member2;
 	
-	Book book1 = new PaperBook("Dune");
+	Book book1 = new EBook("Dune");
 	Book book2 = new PaperBook("1984");
 	
 	@BeforeEach
