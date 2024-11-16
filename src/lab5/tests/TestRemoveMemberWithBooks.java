@@ -2,6 +2,7 @@ package lab5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import lab5.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import lab5.Member;
@@ -13,9 +14,9 @@ class TestRemoveMemberWithBooks {
 
 	Library library;
 	Member member;
-	PaperBook book1;
-	PaperBook book2;
-	PaperBook book3;
+	Book book1;
+	Book book2;
+	Book book3;
 
 	@BeforeEach
 	void setUp() throws Exception {

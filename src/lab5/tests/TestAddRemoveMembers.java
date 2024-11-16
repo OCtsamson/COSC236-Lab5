@@ -3,6 +3,7 @@ package lab5.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 
+import lab5.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,8 +23,8 @@ class TestAddRemoveMembers {
 	
 	Member member1 = new Member("Dude");
 	Member member2 = new Member("Gal");
-	PaperBook book1 = new PaperBook("Dune");
-	PaperBook book2 = new PaperBook("1984");
+	Book book1 = new PaperBook("Dune");
+	Book book2 = new PaperBook("1984");
 	
 	@Test
 	void AddMember() {
