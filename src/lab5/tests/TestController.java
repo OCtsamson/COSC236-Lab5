@@ -25,8 +25,8 @@ class TestController {
 		this.library = librarian.getLibrary(); 
 		librarian.addMember(memberName);
 		librarian.addPaperBook(bookTitle1);
-		librarian.addPaperBook(bookTitle2);
-		librarian.addPaperBook(bookTitle3);
+		librarian.addEBook(bookTitle2);
+		librarian.addAudioBook(bookTitle3);
 	}
 
 	@Test
