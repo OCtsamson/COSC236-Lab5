@@ -5,11 +5,11 @@ import org.junit.platform.suite.api.Suite;
 
 
 @Suite
-@SelectClasses({TestAddRemoveBooks.class, 
+@SelectClasses({TestAddRemoveBooks.class,
 				TestAddRemoveMembers.class,
 				TestFindClassString.class,
 				TestBorrowBooks.class,
-				TestNotAvailableBook.class,
+				TestNotAvailablePaperBook.class,
 				TestRemoveMemberWithBooks.class,
 				TestController.class})
 public class AllTests {
