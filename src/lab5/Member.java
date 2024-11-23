@@ -25,18 +25,10 @@ public class Member {
 		return "Member: " + name;
 	}
 	public void borrowBook(Book book) {
-		if(new BorrowingService().borrowBook(this, book)) {
-			System.out.println("Borrowing book: " + book);
-		}else {
-			System.out.println("Borrowing failed!");
-		}
+		System.out.println(new BorrowingService().borrowBook(this, book));
 	}
 	public void returnBook(Book book) {
-		if(new BorrowingService().returnBook(this, book)) {
-			System.out.println("Returning book: " + book);
-		}else {
-			System.out.println("Returning failed!");
-		}
+		System.out.println(new BorrowingService().returnBook(this, book));
 	}
 	public void listBorrowedBooks() {
 		for (Book book : borrowedBooks)
