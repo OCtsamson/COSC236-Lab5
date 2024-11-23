@@ -1,5 +1,7 @@
 package lab5;
 
+import lab5.Rentals.Book;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 

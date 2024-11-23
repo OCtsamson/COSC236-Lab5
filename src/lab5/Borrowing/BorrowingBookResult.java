@@ -1,4 +1,4 @@
-package lab5;
+package lab5.Borrowing;
 
 public class BorrowingBookResult {
 	private boolean isSuccess;

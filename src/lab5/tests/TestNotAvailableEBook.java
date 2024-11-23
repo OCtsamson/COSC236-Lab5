@@ -1,7 +1,7 @@
 package lab5.tests;
 
-import lab5.Book;
-import lab5.EBook;
+import lab5.Rentals.Book;
+import lab5.Rentals.EBook;
 import lab5.Member;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

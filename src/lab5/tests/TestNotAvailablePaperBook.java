@@ -2,10 +2,10 @@ package lab5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import lab5.Book;
+import lab5.Rentals.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import lab5.PaperBook;
+import lab5.Rentals.PaperBook;
 import lab5.Member;
 
 class TestNotAvailablePaperBook {

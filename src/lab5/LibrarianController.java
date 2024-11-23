@@ -1,5 +1,10 @@
 package lab5;
 
+import lab5.Rentals.AudioBook;
+import lab5.Rentals.Book;
+import lab5.Rentals.EBook;
+import lab5.Rentals.PaperBook;
+
 public class LibrarianController {
 	
 	Library library; // Library dependency

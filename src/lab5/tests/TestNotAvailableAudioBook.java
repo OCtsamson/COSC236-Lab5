@@ -1,7 +1,7 @@
 package lab5.tests;
 
-import lab5.AudioBook;
-import lab5.Book;
+import lab5.Rentals.AudioBook;
+import lab5.Rentals.Book;
 import lab5.Member;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

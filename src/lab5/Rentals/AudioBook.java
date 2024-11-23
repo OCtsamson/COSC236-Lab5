@@ -1,6 +1,6 @@
-package lab5;
+package lab5.Rentals;
 
-public class AudioBook implements Book{
+public class AudioBook implements Book {
 
 	private String title;
 	private boolean isAvailable;

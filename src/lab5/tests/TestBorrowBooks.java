@@ -2,13 +2,13 @@ package lab5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import lab5.Book;
-import lab5.EBook;
+import lab5.Rentals.Book;
+import lab5.Rentals.EBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import lab5.Member;
-import lab5.PaperBook;
+import lab5.Rentals.PaperBook;
 
 class TestBorrowBooks {
 
