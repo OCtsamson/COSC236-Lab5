@@ -19,7 +19,7 @@ public class TestBorrowingServices {
 		member1 = new Member("Kevin"); // flush borrowedBook array
 		book1.setIsAvailable(true);
 		book2.setIsAvailable(true);
-		book3.setIsAvailable(true);
+		book3.setIsAvailable(false);
 	}
 
 	@Test
@@ -44,6 +44,10 @@ public class TestBorrowingServices {
 		assertTrue(book1.getIsAvailable(), "Book should have already been returned" );
 
 		member1.returnBook(book3);
-		assertTrue(book3.getIsAvailable(), "Book was not taken out by member" );
+		assertFalse(book3.getIsAvailable(), "Book was not taken out by this member" );
+
+		member1.borrowBook(book3);
+		assertEquals(member1.borrowedBooksCount(), 1, "Borrowed books should still be one");
+		assertFalse(book3.getIsAvailable(), "Book cannot be borrowed as it has been already" );
 	}
 }
