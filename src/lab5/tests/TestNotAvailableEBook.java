@@ -1,5 +1,6 @@
 package lab5.tests;
 
+import lab5.Borrowing.BorrowingService;
 import lab5.Rentals.Book;
 import lab5.Rentals.EBook;
 import lab5.Member;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TestNotAvailableEBook {
+	private BorrowingService service;
 
 	Member member1;
 	Member member2;
@@ -18,8 +20,9 @@ class TestNotAvailableEBook {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		member1 = new Member("Alice"); // flush borrowedBook array 
-		member2 = new Member("Bob");   // flush borrowedBook array 
+		service = BorrowingService.getInstance();
+		member1 = new Member("Alice", service); // flush borrowedBook array
+		member2 = new Member("Bob", service);   // flush borrowedBook array
 		book1.setIsAvailable(true);
 		book2.setIsAvailable(true);
 	}

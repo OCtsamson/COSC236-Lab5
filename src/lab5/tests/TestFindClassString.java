@@ -2,6 +2,7 @@ package lab5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import lab5.Borrowing.BorrowingService;
 import lab5.Rentals.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,16 +14,17 @@ import lab5.Member;
 
 class TestFindClassString {
 
-	
-private Library library;
+	private BorrowingService service;
+	private Library library;
 	
 	@BeforeEach
 	void setUp() throws Exception {
 		 this.library = new Library(); // empty library for each test
+		this.service = BorrowingService.getInstance();
 	}
 	
-	Member member1 = new Member("Dude");
-	Member member2 = new Member("Gal");
+	Member member1 = new Member("Dude", service);
+	Member member2 = new Member("Gal", service);
 	Book book1 = new PaperBook("Dune");
 	Book book2 = new PaperBook("1984");
 

@@ -8,10 +8,12 @@ import java.util.Iterator;
 
 public class Member {
 
+	private BorrowingService service;
 	private String name;
 	private ArrayList<Book> borrowedBooks; // Book class dependency
 	
-	public Member(String name) {
+	public Member(String name, BorrowingService borrowService) {
+		this.service = borrowService;
 		this.name = name;
 		this.borrowedBooks = new ArrayList<>();
 	}
@@ -28,10 +30,10 @@ public class Member {
 		return "Member: " + name;
 	}
 	public void borrowBook(Book book) {
-		System.out.println(new BorrowingService().borrowBook(this, book));
+		System.out.println(service.borrowBook(this, book));
 	}
 	public void returnBook(Book book) {
-		System.out.println(new BorrowingService().returnBook(this, book));
+		System.out.println(service.returnBook(this, book));
 	}
 	public void listBorrowedBooks() {
 		for (Book book : borrowedBooks)

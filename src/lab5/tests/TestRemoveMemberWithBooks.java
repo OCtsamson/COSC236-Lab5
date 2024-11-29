@@ -3,6 +3,7 @@ package lab5.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 import lab5.*;
+import lab5.Borrowing.BorrowingService;
 import lab5.Rentals.AudioBook;
 import lab5.Rentals.Book;
 import lab5.Rentals.EBook;
@@ -13,6 +14,7 @@ import org.junit.jupiter.api.Test;
 
 class TestRemoveMemberWithBooks {
 
+	BorrowingService service;
 	Library library;
 	Member member;
 	Book book1;
@@ -22,10 +24,11 @@ class TestRemoveMemberWithBooks {
 	@BeforeEach
 	void setUp() throws Exception {
 		this.library = new Library(); // Fresh library: one member, two tests
+		this.service = BorrowingService.getInstance();
 		book1 = new EBook("Dune");
 		book2 = new AudioBook("1984");
 		book3 = new PaperBook("Moby Dick");
-		member = new Member("Dude");
+		member = new Member("Dude", service);
 		library.addMember(member);
 		library.addBook(book1);
 		library.addBook(book2);

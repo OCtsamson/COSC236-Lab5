@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 import lab5.*;
+import lab5.Borrowing.BorrowingService;
 import lab5.Rentals.AudioBook;
 import lab5.Rentals.Book;
 import lab5.Rentals.EBook;
@@ -15,17 +16,21 @@ import org.junit.jupiter.api.Test;
 class TestAddRemoveBooks {
 	
 	private Library library;
+	private BorrowingService service;
+
+	Member member;
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		 this.library = new Library(); // empty library for each test
+		this.service = BorrowingService.getInstance();
+		this.library = new Library(); // empty library for each test
+
+		member = new Member("Grady Booch", service);
 	}
 
 	Book book1 = new PaperBook("Dune");
 	Book book2 = new EBook("1984");
 	Book book3 = new AudioBook("Moby Dick");
-	
-	Member member = new Member("Grady Booch");
 	
 	@Test
 	void AddBooks() {
