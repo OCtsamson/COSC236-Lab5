@@ -2,18 +2,28 @@ package lab5;
 
 import lab5.Borrowing.BorrowingService;
 import lab5.Rentals.AudioBook;
+import lab5.Rentals.AudioBookFactory;
 import lab5.Rentals.Book;
+import lab5.Rentals.BookFactory;
 import lab5.Rentals.EBook;
+import lab5.Rentals.EBookFactory;
 import lab5.Rentals.PaperBook;
+import lab5.Rentals.PaperBookFactory;
 
 public class LibrarianController {
 	
 	private Library library; // Library dependency
 	private BorrowingService borrowingService;
+	private AudioBookFactory audiobookfactory;
+	private EBookFactory ebookfactory;
+	private PaperBookFactory paperbookfactory;
 	
 	public LibrarianController( ) {
 		this.library = new Library(); // Constructor injection
 		this.borrowingService = BorrowingService.getInstance();
+		this.paperbookfactory = paperbookfactory;
+		this.ebookfactory = ebookfactory;
+		this.audiobookfactory = audiobookfactory;
 	}
 	public Library getLibrary() {
 		return this.library;
@@ -25,14 +35,18 @@ public class LibrarianController {
 		library.showMembers();
 	}
 	public void addPaperBook(String title) {
-		library.addBook(new PaperBook(title));  // Book class constructor dependency
+		library.addBook(paperbookfactory.createBook(title));  // Book class constructor dependency
 	}
 	public void addEBook(String title) {
-		library.addBook(new EBook(title));
+		library.addBook(ebookfactory.createBook(title));
 	} // Add E-Book
 	public void addAudioBook(String title) {
-		library.addBook(new AudioBook(title));
+		library.addBook(audiobookfactory.createBook(title));
 	} //Add Audio-Book
+	
+	public void addBook(BookFactory factory, String title) { 
+		library.addBook(factory.createBook(title));
+	}
 	public void addMember(String name) {
 		library.addMember(new Member(name, borrowingService)); // Member class constructor dependency
 	}
