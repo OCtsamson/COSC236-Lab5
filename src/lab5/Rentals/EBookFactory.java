@@ -1,29 +1,17 @@
 package lab5.Rentals;
 
+import lab5.Library;
+
 public class EBookFactory extends BookFactory {
 
 
-	public String getTitle() {
-		// TODO Auto-generated method stub
-		return null;
+	public EBookFactory(Library library) {
+		super(library);
 	}
-
 	
-	public void setIsAvailable(boolean isAvailable) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	public boolean getIsAvailable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	
+	@Override
 	public Book createBook(String title) {
-		EBook ebook = new EBook(title);
-		return ebook;
+		return new EBook(title);
 	}
 
 }

@@ -31,7 +31,9 @@ public class Library {
 		members.add(member);
 	}
 	public void addBook(Book book) {
-		catalog.add(book);
+		if (book != null) {
+			catalog.add(book);
+        }
 	}
 	public void removeMember(String name) {
 		Member member = findMemberByName(name);

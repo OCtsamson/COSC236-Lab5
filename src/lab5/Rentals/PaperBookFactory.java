@@ -1,26 +1,17 @@
 package lab5.Rentals;
 
+import lab5.Library;
+
 public class PaperBookFactory extends BookFactory {
 
 	
-	public String getTitle() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public void setIsAvailable(boolean isAvailable) {
-	}
-
-	
-	public boolean getIsAvailable() {
-		return false;
-	}
-
-	
+	@Override
 	public Book createBook(String title) {
-		PaperBook paperbook = new PaperBook(title);
-		return paperbook;
+		return new PaperBook(title);
+	}
+	
+	public PaperBookFactory(Library library) {
+		super(library);
 	}
 
 }

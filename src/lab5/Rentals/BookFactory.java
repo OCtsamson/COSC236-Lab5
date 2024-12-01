@@ -1,5 +1,13 @@
 package lab5.Rentals;
 
-public abstract class BookFactory implements Book {
+import lab5.Library;
+
+public abstract class BookFactory  {
 	public abstract Book createBook(String title);
+	
+	private Library library;
+	
+	public BookFactory(Library library) { 
+		this.library = library;
+	}
 }
